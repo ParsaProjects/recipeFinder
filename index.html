@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
+    <title>Recipe Finder App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <h1>Recipe Finder</h1>
-        <input type="text" id="ingredient-input" placeholder="Enter ingredients (comma separated)">
-        <button id="search-btn">Search Recipes</button>
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('search')">Search</button>
+        <button class="tab-button" onclick="openTab('favorites')">Favorites</button>
+        <button class="tab-button" onclick="openTab('random')">Random Recipes</button>
+    </div>
+    <div id="search" class="tab-content active">
+        <input type="text" id="ingredient-input" placeholder="Enter ingredients">
+        <button id="search-btn">Search</button>
         <div id="recipe-container"></div>
+    </div>
+    <div id="favorites" class="tab-content">
+        <div id="favorites-container"></div>
+    </div>
+    <div id="random" class="tab-content">
+        <div id="random-recipes-container"></div>
     </div>
     <script src="script.js"></script>
 </body>
